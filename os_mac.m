@@ -238,7 +238,7 @@ fn OS_Handle os_openWindow(char *title, f32 x, f32 y, f32 w, f32 h)
 {
     OS_Window *win = os_state->win + os_state->num++;
     
-    NSUInteger windowStyle = NSTitledWindowMask  | NSClosableWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask;
+    NSUInteger windowStyle = NSWindowStyleMaskTitled  | NSWindowStyleMaskClosable | NSWindowStyleMaskResizable | NSWindowStyleMaskMiniaturizable;
     
     NSRect screenRect = [[NSScreen mainScreen] frame];
     NSRect viewRect = NSMakeRect(x, y, w, h);
